@@ -6,6 +6,7 @@
 4. [Process](#process)
 5. [Code Instructions](#code-instructions)
 6. [Result](#result)
+7. [Citation](#citation)
 ## Teammates
 - Jae Yoon Chung
 - Kong Minsik
@@ -62,3 +63,7 @@ Excecution Code : python zzampong.py --embedding-model openface_nn4.small2.v1.t7
 ### - Secondary Face Detector 
 ![image](https://user-images.githubusercontent.com/90415099/147802087-f39ebebd-3e12-4eca-8f07-3d52540630dd.png)
 When the marked score is higher than the pre-decided threshold, the system prints out the decided user’s name and device’s status(lock/unlock) to unlock.
+
+## Citation
+1. https://www.pyimagesearch.com/2020/05/04/covid-19-face-mask-detector-with-opencv-keras-tensorflow-and-deep-learning/
+2. https://www.pyimagesearch.com/2018/09/24/opencv-face-recognition/
