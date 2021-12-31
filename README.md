@@ -1,8 +1,8 @@
 # Face-Recognition-System-Robust-to-Identify-a-Covered-Face-using-Deep-Learning
 ## Content 
 1. [Teammates](#teammates)
-2. [Abstract]()
-3. [Algorithm Diagram](#abstract)
+2. [Abstract](#abstract)
+3. [Algorithm Diagram](#algorithm-diagram)
 4. [Process](#process)
 ## Teammates
 - Jae Yoon Chung
@@ -23,7 +23,7 @@ When face of the input image is covered by an accessory, the accuracy of the fac
 ![image](https://user-images.githubusercontent.com/90415099/147802038-62c9a6b8-3dac-4618-8a05-8feae03ce515.png)
 ![image](https://user-images.githubusercontent.com/90415099/147802052-d8fa1675-2219-4ee8-86a9-0b48fa783b8c.png)
 
-## Code Instruction
+## Code Instructions
 ### 1. Run accessory_detector/train_accessory_detector.py
 Excecution code : python train_accessory_detector.py --dataset dataset_accessory<br />
 The directory dataset_accessory has the datasets of default faces and faces with masks. You may add more images into each directories.<br />
