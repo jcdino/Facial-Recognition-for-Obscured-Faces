@@ -19,11 +19,23 @@ When face of the input image is covered by an accessory, the accuracy of the fac
 ![image](https://user-images.githubusercontent.com/90415099/147802052-d8fa1675-2219-4ee8-86a9-0b48fa783b8c.png)
 
 ## Code Instruction
-### 1. run train_accessory_detector.py
+### 1. Run accessory_detector/train_accessory_detector.py
 Excecution code : python train_accessory_detector.py --dataset dataset_accessory<br />
 The directory dataset_accessory has the datasets of default faces and faces with masks. You may add more images into each directories.<br />
 If you want to add the type of accessories to detect, create a new directory and add images of faces wearing it.<br />
 => Output : accessory_detector.model
+### 2. Go to dir output_creator
+### 3. Download nn4.small2.v1.t7
+[nn4.small2.v1.t7](http://cmusatyalab.github.io/openface/)
+### 4. Run codes
+- extract_embeddings_default.py<br />
+Excecution Code : python codes/default/extract_embeddings_default.py --dataset dataset --embeddings output/embeddings_default.pickle --detector face_detection_model --embedding-model openface_nn4.small2.v1.t7
+- train_model_default.py<br />
+Excecution Code : python codes/default/train_model_default.py --embeddings output/embeddings_default.pickle --recognizer output/recognizer_default.pickle --le output/le_default.pickle
+### 4-1. Repeat step4 with mask
+### 4-2. Test result
+Test the outputs of step4 and step4-1 with cameras.<br />
+Excecution Code : python codes/mask/recognize_video_mask.py --detector face_detection_model --embedding-model openface_nn4.small2.v1.t7 --recognizer output/recognizer_mask.pickle --le output/le_mask.pickle
 
 ## Result
 ### - Primary Fcae Detector
