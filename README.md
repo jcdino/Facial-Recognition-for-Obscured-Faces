@@ -43,3 +43,6 @@ Excecution Code : python codes/mask/recognize_video_mask.py --detector face_dete
 
 ### - Secondary Face Detector 
 ![image](https://user-images.githubusercontent.com/90415099/147802087-f39ebebd-3e12-4eca-8f07-3d52540630dd.png)
+When the marked score is higher than the pre-decided threshold, the system prints out the decided user’s name and device’s status(lock/unlock) to unlock.
+
+
