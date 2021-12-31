@@ -5,7 +5,7 @@
 3. [Algorithm Diagram](#algorithm-diagram)
 4. [Process](#process)
 5. [Code Instructions](#code-instructions)
-6. [Result](Result)
+6. [Result](#result)
 ## Teammates
 - Jae Yoon Chung
 - Kong Minsik
