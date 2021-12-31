@@ -26,7 +26,7 @@ If you want to add the type of accessories to detect, create a new directory and
 => Output : accessory_detector.model
 ### 2. Go to dir output_creator
 ### 3. Download nn4.small2.v1.t7
-[nn4.small2.v1.t7](http://cmusatyalab.github.io/openface/)
+[nn4.small2.v1.t7](http://cmusatyalab.github.io/openface/) is copyright Carnegie Mellon University and licensed under the Apache 2.0 License.
 ### 4. Run codes
 - extract_embeddings_default.py<br />
 Excecution Code : python codes/default/extract_embeddings_default.py --dataset dataset --embeddings output/embeddings_default.pickle --detector face_detection_model --embedding-model openface_nn4.small2.v1.t7
@@ -36,6 +36,17 @@ Excecution Code : python codes/default/train_model_default.py --embeddings outpu
 ### 4-2. Test result
 Test the outputs of step4 and step4-1 with cameras.<br />
 Excecution Code : python codes/mask/recognize_video_mask.py --detector face_detection_model --embedding-model openface_nn4.small2.v1.t7 --recognizer output/recognizer_mask.pickle --le output/le_mask.pickle
+### 5. Go to dir main_module
+### 6. Download shape_predictor_68_face_landmarks.dat
+[shape_predictor_68_face_landmarks.dat](https://sourceforge.net/projects/dclib/files/dlib/v18.10/ ) is licensed under the Boost Software License - Version 1.0.
+### 7. Download nn4.small2.v1.t7
+[nn4.small2.v1.t7](http://cmusatyalab.github.io/openface/) is copyright Carnegie Mellon University and licensed under the Apache 2.0 License.
+### 8. Move accessory_detector.model 
+From ../accessory_detector/accessory_detector.model to ../main_module/
+### 9. Move outputs
+From ../output_creator/output/ to ../main_module/output/
+### 10. Run zzampong.py
+Excecution Code : python zzampong.py --embedding-model openface_nn4.small2.v1.t7 --recognizer output/recognizer_default.pickle --le output/le_default.pickle --recognizer_mask output/recognizer_mask.pickle --le_mask output/le_mask.pickle
 
 ## Result
 ### - Primary Fcae Detector
@@ -44,5 +55,3 @@ Excecution Code : python codes/mask/recognize_video_mask.py --detector face_dete
 ### - Secondary Face Detector 
 ![image](https://user-images.githubusercontent.com/90415099/147802087-f39ebebd-3e12-4eca-8f07-3d52540630dd.png)
 When the marked score is higher than the pre-decided threshold, the system prints out the decided user’s name and device’s status(lock/unlock) to unlock.
-
-
