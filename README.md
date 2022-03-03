@@ -16,13 +16,13 @@ As an influence of the COVID 19 pandemic, everyone is required to wear a facial 
 ![그림1](https://user-images.githubusercontent.com/90415099/147800943-46cd4f1e-f71e-4ce0-9a83-a62ea35dea7f.png)
 ## Process
 ### 1. Accessory Detector
-This model identifies the accessory the user is wearing. The model uses the MobileNet V2 architecture with a new head layer. The weights of architecyure is set as the wieghts of the ImageNet. Fine tuning, which freezes the convolutional base and training the classifier, is used to decide the weights of the head layer. 
+The model identifies the accessory the user is wearing. The model uses the MobileNet V2 architecture with a new head layer. The weights of architecture is set as the weights of the ImageNet. Fine tuning, which freezes the convolutional base and training the classifier, is used to decide the weights of the head layer. 
 ![그림2](https://user-images.githubusercontent.com/90415099/147801268-ea5968d2-75d4-419a-9ac4-b3ad9731214f.png)
 ### 2. Face Recognizer 
-The model used for facial recognition is trained with the images of the registered users. The 128-D embeddings of the images are extracted and used to decide the embeddings for each user. This is done by using the triplet loss function. By comparing the embeddings of the input image and the registered user, the model predicts who is in the input image.
+The model used for facial recognition is trained with the images of the registered users. The 128-D embeddings of the images are extracted and used to decide the embeddings for each user. This is done by using the triplet loss function. the model determines the identifies the person in the input image by comparing the embeddings of the input image and the data of the registered users, 
 ![그림3](https://user-images.githubusercontent.com/90415099/147801667-e689abcc-f5a4-4cfb-91bb-0e22ffbc7960.png)
 ### 3. Image Composition
-When face of the input image is covered by an accessory, the accuracy of the facial recognition is low. The image composition process resolves this problem by recreating the face of the input image into an uncovered face. The given graphs compares two situations: compositing images with the same user’s image and a different user’s image. The graphs show that compositing the image with the same user gives a higher accuracy.
+If the face of the input image is covered by an accessory, the accuracy of the facial recognition is returned low. The image composition process resolves this problem by recreating the face of the input image into an uncovered face. The given graphs compares two situations: compositing images with the same user’s image and a different user’s image. The graphs show that compositing the image with the same user gives a higher accuracy.
 ![image](https://user-images.githubusercontent.com/90415099/147802038-62c9a6b8-3dac-4618-8a05-8feae03ce515.png)
 ![image](https://user-images.githubusercontent.com/90415099/147802052-d8fa1675-2219-4ee8-86a9-0b48fa783b8c.png)
 
