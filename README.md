@@ -8,8 +8,8 @@
 6. [Result](#result)
 7. [Citation](#citation)
 ## Teammates
-- Jae Yoon Chung
-- Kong Minsik
+- [Jae Yoon Chung](https://github.com/jcdino)
+- [Kong Minsik](https://github.com/Minsik96)
 ## Abstract
 As an influence of the COVID 19 pandemic, everyone is required to wear a facial mask. This made it hard to identify the user’s face using the present facial recognition systems with portable devices. Using deep learning, our project resolves this problem by creating a system that identifies the user accurately and efficiently, even when the face is covered by an accessory.
 ## Algorithm Diagram
